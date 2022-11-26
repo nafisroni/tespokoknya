@@ -1,0 +1,326 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5E8C7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* PALLET */
+/* 
+AC7088 - bold
+DEB6AB - agak mudar
+ECCCB2 - mudar
+F5E8C7 - mudar banget
+*/
+
+
+/* Drawer */
+.navbar{
+  padding: 8px 16px;
+  background-color: #AC7088;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar .nav-logo{
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-logo h1{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.navbar .drawer_nav{
+  position: absolute;
+  top: 65px;
+  left: -220px;
+  width: 200px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: #AC7088;
+  overflow: hidden;
+}
+
+.navbar .drawer_nav.open{
+  left: 0;
+}
+
+.navbar .drawer_nav ul li{
+  padding: 0 20px;
+  margin-right: 10px;
+}
+
+.navbar .drawer_nav ul li a{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 13px 8px;
+  margin-left: 12px;
+  margin-bottom: 5px;
+  width: 100%;
+  border-radius: 30px;
+}
+.navbar .drawer_nav ul li a:hover{
+  padding: 13px 8px;
+  background-color: #ECCCB2;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.navbar .navbar-hamburger{
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-hamburger button{
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.active{
+  background-color: #ECCCB2;
+  font-weight: bold;
+  box-shadow: 2px;
+}
+
+/* skip konten */
+.skip-link {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  padding: 13px;
+  background-color: #e00b19;
+  color: #ffffff;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* hero */
+
+.hero{
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+
+/* MainContent */
+
+
+.text-heading{
+  font-size: 24px;
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+}
+
+.container{
+  margin:0 30px;
+}
+
+.restaurants{
+  display: grid;
+  font-size: 16px;
+}
+
+.col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 32px 0;
+}
+
+.col a{
+  text-decoration: none;
+}
+
+.card{
+  width: 100%;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ECCCB2;
+}
+
+.card .card-img .lazyloaded{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  /* max-height: 200px; */
+}
+
+.card .description{
+  color: black;
+}
+
+.card .description .city{
+  background-color: #DEB6AB;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.card .description .title{
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.card .description .subtitle{
+  margin: 10px;
+}
+
+/* footer */
+/* footer {
+  padding: 16px;
+}
+ 
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}
+ 
+footer p a {
+  color: #db0000;
+  text-decoration: none;
+} */
+
+/* DETAIL */
+.restaurant{
+  display: grid;
+  font-size: 16px;
+  margin: 40px;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+.restaurant_title{
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.restaurant .img-res2{
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+
+.detailRestaurant p{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.restaurant .detail_information{
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.restaurant .detail_description{
+  font-size: 22px;
+}
+.restaurant .detail_location{
+  font-size: 22px;
+}
+.restaurant .detail_rating{
+  font-size: 22px;
+}
+.restaurant .detail_address{
+  font-size: 22px;
+}
+.restaurant .detail_category{
+  font-size: 22px;
+}
+.restaurant .detail_menu{
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.detailRestaurant h4{
+  font-size: 20px;
+}
+.restaurant .reviews{
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+.detail_reviews .hasil_reviews{
+  width: 100%;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ECCCB2;
+  margin-bottom: 10px;
+}
+.detail_reviews .hasil_reviews p{
+  margin: 20px;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #AC7088;
+  position: fixed;
+  bottom: 40px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: #ECCCB2;
+  cursor: pointer;
+}
+
+
+/* Like Fav */
+.content__heading{
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+.restaurant_like{
+  margin: 80px; 
+}
+
+/* footer */
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #AC7088;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
